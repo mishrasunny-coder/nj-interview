@@ -2,7 +2,7 @@
 
 Business Need: API Validation Test
 
-  Scenario: Validate that i can retrieve a user
-    Given I call the api requesting user id 2
-    And It returns a 200 status code
-    Then It will contain the user object for user id 2
+  Scenario: Developer can retrieve sporting events for the next 24 hours from the API
+    Given I retrieve all events from the API
+    When the events are filtered for the next 24 hours
+    Then all the remaining events are from the next 24 hours
